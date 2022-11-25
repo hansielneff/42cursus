@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:59:26 by helneff           #+#    #+#             */
-/*   Updated: 2022/11/16 09:26:29 by helneff          ###   ########.fr       */
+/*   Updated: 2022/11/24 16:29:44 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_utoa(unsigned int n)
 	char	*str;
 	int		str_len;
 
-	str_len = ft_digitsu(n, 10);
+	str_len = ft_digitsul(n, 10);
 	str = malloc(str_len + 1);
 	if (str == NULL)
 		return (NULL);

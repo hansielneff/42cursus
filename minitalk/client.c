@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:46:06 by helneff           #+#    #+#             */
-/*   Updated: 2022/11/22 13:41:03 by helneff          ###   ########.fr       */
+/*   Updated: 2022/11/24 16:29:34 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(int argc, char	*argv[])
 	disp.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &disp, NULL);
 	server_pid = ft_atoi(argv[1]);
-	if (!server_pid || (size_t)ft_digitsi(server_pid, 10) < ft_strlen(argv[1]))
+	if (!server_pid || (size_t)ft_digitsl(server_pid, 10) < ft_strlen(argv[1]))
 	{
 		ft_printf("usage: client server_pid message\n");
 		return (1);

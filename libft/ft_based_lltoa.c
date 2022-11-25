@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 06:55:23 by helneff           #+#    #+#             */
-/*   Updated: 2022/11/16 09:25:43 by helneff          ###   ########.fr       */
+/*   Updated: 2022/11/24 16:29:34 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_based_lltoa(long long n, int base)
 		is_negative = 1;
 	else
 		n *= -1;
-	str_len = ft_digitsi(n, base) + is_negative;
+	str_len = ft_digitsl(n, base) + is_negative;
 	str = malloc(str_len + 1);
 	if (str == NULL)
 		return (NULL);

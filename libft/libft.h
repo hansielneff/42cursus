@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:35:40 by helneff           #+#    #+#             */
-/*   Updated: 2022/11/18 15:22:17 by helneff          ###   ########.fr       */
+/*   Updated: 2022/11/24 16:32:12 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // Extra
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
-int		ft_digitsi(long n, int base);
-int		ft_digitsu(unsigned long n, unsigned int base);
+size_t	ft_digitsl(long n, int base);
+size_t	ft_digitsul(unsigned long n, unsigned int base);
 char	*ft_based_lltoa(long long n, int base);
 char	*ft_based_ulltoa(unsigned long long n, unsigned int base);
 char	*ft_utoa(unsigned int n);

@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 06:55:23 by helneff           #+#    #+#             */
-/*   Updated: 2022/11/16 09:26:01 by helneff          ###   ########.fr       */
+/*   Updated: 2022/11/24 16:29:44 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_based_ulltoa(unsigned long long n, unsigned int base)
 
 	if (base < 2 || base > 36)
 		return (NULL);
-	str_len = ft_digitsu(n, base);
+	str_len = ft_digitsul(n, base);
 	str = malloc(str_len + 1);
 	if (str == NULL)
 		return (NULL);
