@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:35:40 by helneff           #+#    #+#             */
-/*   Updated: 2022/11/24 16:32:12 by helneff          ###   ########.fr       */
+/*   Updated: 2022/12/07 17:13:47 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ char	*ft_utoa(unsigned int n);
 size_t	ft_count(char *str, char c);
 char	*ft_chrtostr(char c);
 char	*ft_strpad(char *s, char c, size_t amount, int right_side);
+void	ft_lstdellast(t_list **lst, void (*del)(void*));
 
 #endif

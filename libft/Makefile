@@ -17,7 +17,7 @@ BONUS = \
 EXTRA = \
 	ft_min.c			ft_max.c			ft_digitsl.c	ft_digitsul.c \
 	ft_based_lltoa.c	ft_based_ulltoa.c	ft_utoa.c		ft_count.c \
-	ft_chrtostr.c		ft_strpad.c
+	ft_chrtostr.c		ft_strpad.c			ft_lstdellast.c
 GNL = \
 	get_next_line/get_next_line.c
 PRINTF = \
