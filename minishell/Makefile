@@ -8,7 +8,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ) libft/libft.a
-	cc -o $(NAME) -Llibft -lft $(COMPILE_FLAGS) $(OBJ)
+	cc -o $(NAME) -Llibft -lft -lreadline $(COMPILE_FLAGS) $(OBJ)
 
 $(OBJ): $(SRC)
 	cc -c -I libft $(COMPILE_FLAGS) $(SRC)
