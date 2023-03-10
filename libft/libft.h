@@ -6,7 +6,7 @@
 /*   By: helneff <helneff@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:35:40 by helneff           #+#    #+#             */
-/*   Updated: 2022/12/07 17:13:47 by helneff          ###   ########.fr       */
+/*   Updated: 2023/03/02 15:29:41 by helneff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ size_t	ft_count(char *str, char c);
 char	*ft_chrtostr(char c);
 char	*ft_strpad(char *s, char c, size_t amount, int right_side);
 void	ft_lstdellast(t_list **lst, void (*del)(void*));
+char	*ft_strsubst(const char *s, const char *find, const char *replace);
 
 #endif
