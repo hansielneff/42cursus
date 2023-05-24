@@ -1,0 +1,10 @@
+minirt
+minirt.dSYM/
+*.o
+*.gch
+*.a
+libft/libft.a
+minirt
+.DS_STORE
+.DS_Store
+.vscode
