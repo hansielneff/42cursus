@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  nginx:
+    build: ./requirements/nginx/
+    image: nginx:helneff
+    container_name: nginx
+    env_file: .env
+    restart: always
+    depends_on:
+      - wordpress
+    ports:
+      - 443:443
+    networks:
+      - inception
+    volumes:
+      - ~/data/wordpress:/var/www/html
+
+  mariadb:
+    build: ./requirements/mariadb
+    image: mariadb:helneff
+    container_name: mariadb
+    env_file: .env
+    restart: always
+    networks:
+      - inception
+    volumes:
+      - ~/data/mariadb:/var/lib/mysql
+
+  wordpress:
+    build: ./requirements/wordpress/
+    image: wordpress:helneff
+    container_name: wordpress
+    env_file: .env
+    restart: always
+    depends_on:
+      - mariadb
+    networks:
+      - inception
+    volumes:
+      - ~/data/wordpress:/var/www/html
+
+networks:
+  inception:
