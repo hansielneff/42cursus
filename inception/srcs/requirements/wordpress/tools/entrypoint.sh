@@ -3,7 +3,7 @@
 # Establish connection to mariadb before proceeding
 while ! mariadb -h${MARIADB_HOST} -u${MARIADB_USER} -p${MARIADB_PASSWORD} ${MARIADB_DATABASE} &>/dev/null; do
 	echo Establishing connection to database..
-    sleep 2
+    sleep 5
 done
 
 if [ -f "wp-config.php" ]; then
@@ -18,7 +18,7 @@ else
 		--dbpass=${MARIADB_PASSWORD}
 
 	wp core install --allow-root \
-		--url=${DOMAIN_NAME} \
+		--url=helneff.42.fr \
 		--title=${WP_TITLE} \
 		--admin_user=${WP_ADMIN_USER} \
 		--admin_password=${WP_ADMIN_PASS} \

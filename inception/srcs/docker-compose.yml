@@ -14,7 +14,7 @@ services:
     networks:
       - inception
     volumes:
-      - ~/data/wordpress:/var/www/html
+      - wordpress_data:/var/www/html
 
   mariadb:
     build: ./requirements/mariadb
@@ -25,7 +25,7 @@ services:
     networks:
       - inception
     volumes:
-      - ~/data/mariadb:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
 
   wordpress:
     build: ./requirements/wordpress/
@@ -38,7 +38,21 @@ services:
     networks:
       - inception
     volumes:
-      - ~/data/wordpress:/var/www/html
+      - wordpress_data:/var/www/html
+
+volumes:
+  mariadb_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/helneff/data/mariadb
+      o: bind
+  wordpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/helneff/data/wordpress
+      o: bind
 
 networks:
   inception:

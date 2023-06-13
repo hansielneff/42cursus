@@ -1,13 +1,16 @@
 #! /bin/bash
 
 # Setup database if none exists
-if [ ! -d "/var/lib/mysql/mysql" ]; then
+if [ ! -f "/var/lib/mysql/mysql/setup" ]; then
 	
 	# Transfer ownership of database dir to mysql user
 	chown -R mysql:mysql /var/lib/mysql
 
 	# Install mariadb database
 	mysql_install_db --basedir=/usr --datadir=/var/lib/mysql --user=mysql --rpm > /dev/null
+
+	# Create the 'setup' file, indicating that MariaDB has been initialized
+	touch /var/lib/mysql/mysql/setup
 
 	# Basic setup and applying recommended security changes (equivalent to running mysql_secure_installation)
 	# https://dev.mysql.com/doc/refman/5.7/en/mysql-secure-installation.html

@@ -1,7 +1,9 @@
+# https://wordpress.org/documentation/article/nginx/
+# https://webhostinggeeks.com/howto/how-to-run-wordpress-on-nginx-php-fpm-and-mysql/
+
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    # server_name ${DOMAIN_NAME};
     server_name helneff.42.fr;
 
     include snippets/snakeoil.conf;
@@ -26,10 +28,6 @@ server {
     }
 
     # pass the PHP scripts to FastCGI server listening on wordpress:9000
-    # https://wordpress.org/documentation/article/nginx/
-    # https://www.digitalocean.com/community/tutorials/php-fpm-nginx
-    # https://webhostinggeeks.com/howto/how-to-run-wordpress-on-nginx-php-fpm-and-mysql/
-    # https://medium.com/swlh/wordpress-deployment-with-nginx-php-fpm-and-mariadb-using-docker-compose-55f59e5c1a
     location ~ \.php$ {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_pass wordpress:9000;
